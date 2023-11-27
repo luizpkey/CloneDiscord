@@ -1,0 +1,104 @@
+:root {
+   --image-banner: url(../assets/banner430.png);
+   --h1-banner-font-size: 32px;
+   --align-itens: flex-start;
+   --h1-text-align: Left;
+   --width-title: 100vw;
+   --width-text: 100vw;
+}
+
+@media (width>430px) {
+   :root {
+      --h1-banner-font-size: 56px;
+      --align-itens: center;
+      --h1-text-align: center;
+      --width-title: 313px;
+      --width-text: 757px;
+   }
+}
+
+@media (width>430px) and (width<=1280px) {
+   :root {
+      --image-banner: url(../assets/banner1280.png);
+   }
+}
+
+@media (width>1280px) {
+   :root {
+      --image-banner: url(../assets/banner2560.png);
+   }
+}
+
+.top {
+   background: var(--image-banner), lightgray 50% / cover no-repeat;
+   width: 100vw;
+   height: 459px;
+}
+
+.baanner {
+   display: inline-flex;
+   align-items: center;
+}
+
+.banner-container {
+   display: flex;
+   padding: 0px 24px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: var(--align-itens);
+   gap: 24px;
+
+}
+
+.top>.banner-container>h1 {
+   width:var(--width-title);
+   color: #FFF;
+   font-family: Luckiest Guy;
+   font-weight: 400;
+   font-style: normal;
+   line-height: normal;
+   font-size: var(--h1-banner-font-size);
+   text-align: var(--h1-text-align);
+}
+
+.top>.banner-container>.banner-description {
+   width:var(--width-text);
+   color: #FFF;
+   font-family: Open Sans;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+.top>.banner-container>.buttons>.download {
+   margin:8px 0px;
+   width: 381px;
+   height: 54px;
+   border-radius: 28px;
+   background: #FFF;
+   color: #23272A;
+   text-align: center;
+   font-family: Open Sans;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   cursor: pointer;
+}
+
+.top>.banner-container>.buttons>.open {
+   margin:8px 0px;
+   width: 381px;
+   height: 52px;
+   border-radius: 28px;
+   background: #23272A;
+   color: #FFF;
+   text-align: center;
+   font-family: Open Sans;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   cursor: pointer;
+}
